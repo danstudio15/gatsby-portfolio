@@ -1,21 +1,33 @@
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
   align-items: center;
 }
+<<<<<<< Updated upstream
 
 .header h2 {
   font-size: 4em;
 }
 
+=======
+.header h2 {
+  font-size: 4em;
+}
+>>>>>>> Stashed changes
 .header h3 {
   font-size: 3em;
   font-weight: 400;
   margin-bottom: 20px;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .btn {
   display: inline-block;
   background: #D42990;
@@ -23,4 +35,8 @@
   border-radius: 10px;
   margin-top: 20px;
   font-weight: 500;
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
