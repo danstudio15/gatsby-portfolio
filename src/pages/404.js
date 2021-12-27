@@ -1,15 +1,4 @@
 import React from 'react'
-<<<<<<< Updated upstream
-
-export default function NotFound() {
-    return (
-        <div>
-            <h2>404</h2>
-            <p>Sorry Page Doesn't Exist</p>
-        </div>
-    )
-}
-=======
 import Layout from '../components/Layout'
 
 const NotFound = () => {
@@ -24,4 +13,3 @@ const NotFound = () => {
 }
  
 export default NotFound
->>>>>>> Stashed changes
