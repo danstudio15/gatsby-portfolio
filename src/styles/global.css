@@ -23,24 +23,29 @@ p {
 .layout {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 40px auto;
 }
+nav .title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
 nav .links {
   display: inline-block;
   text-align: right;
 }
-nav a {
+nav .links a {
   display: inline-block;
   margin-left: 20px;
   font-weight: 400;
   padding-bottom: 8px;
   border-bottom: 3px solid transparent;
 }
-nav a:hover {
+nav .links a:hover {
   border-color: white;
 }
 footer p{
