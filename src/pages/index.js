@@ -1,33 +1,49 @@
-import React from "react"
-import { graphql, Link } from 'gatsby'
-import Layout from "../components/Layout"
+import { Link, graphql } from 'gatsby';
+import React from 'react'
+import Layout from '../components/Layout'
 import * as styles from '../styles/home.module.css'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-export default function Home({ data }) {
+const Home = ({ data }) => {
 
-  const image = getImage(data.file)
+  const projects = data.projectList.nodes
 
   return (
     <Layout>
-      <section className={styles.header}>
-        <div>
-          <h2>Design</h2>
-          <h3>Develop & Deploy</h3>
-          <p>UX designer & web developer based in Manchester.</p>
-          <Link className={styles.btn} to="/projects">My Portfolio Projects</Link>
+        <div className={styles.projects}>
+          {projects.map(project => (
+            <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
+              <div className={styles.projectimage}>
+                <GatsbyImage image={getImage(project.frontmatter.featuredImg)}/>
+                <div className={styles.projectinfo}>
+                  <h3>{project.frontmatter.title}</h3>
+                  <p>{project.frontmatter.category}</p>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
-        <GatsbyImage image={image}/>
-      </section>
     </Layout>
-  )
+  );
 }
+ 
+export default Home
 
 export const query = graphql`
-  query Banner {
-    file(relativePath: {eq: "banner.png"}) {
-      childImageSharp {
-        gatsbyImageData
+  query ProjectsPage {
+    projectList: allMarkdownRemark (sort: {fields: frontmatter___date, order: DESC}) {
+      nodes {
+        frontmatter {
+          title
+          slug
+          category
+          featuredImg {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+        id
       }
     }
   }
