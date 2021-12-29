@@ -11,7 +11,7 @@ html, body {
   min-height: 100%;
 }
 body {
-  background: radial-gradient(at top left, rgba(146,43,225,1) 0%, rgba(43,9,107,1) 100%);
+  background: radial-gradient(at bottom right, rgb(41, 41, 41) 0%, rgb(32, 32, 32) 100%);
   background-repeat: no-repeat;
 }
 p {

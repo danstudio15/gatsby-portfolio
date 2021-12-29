@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from "react-helmet"
 import Navbar from './Navbar'
 import '../styles/global.css'
 import { graphql, useStaticQuery } from 'gatsby'
@@ -8,22 +9,25 @@ export default function Layout({ children }) {
     {
       site {
         siteMetadata {
-          copyright
+          title
         }
       }
     }
   `)
-  const { copyright } = data.site.siteMetadata
+
+  const { title } = data.site.siteMetadata
+
 
   return (
     <div className="layout">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{ title }</title>
+      </Helmet>
       <Navbar />
       <div className="content">
         { children }
       </div>
-      <footer>
-        <p>{ copyright }</p>
-      </footer>
     </div>
   )
 }
