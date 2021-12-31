@@ -1,20 +1,42 @@
+.details {
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+}
+
 .details h2 {
-    font-size: 3.5em;
-    margin-top: 80px;
+    font-size: 2.5em;
+    font-weight: 500;
 }
 
 .details h3 {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 400;
-    margin-bottom: 40px;
+    color: rgb(231, 231, 231);
 }
 
-.html {
-    margin-top: 40px;
+.details h4 {
+    font-size: 1em;
+    font-weight: 400;
+    color: rgb(231, 231, 231);
+    margin-top: 4px;
 }
 
 .featured {
+    position: relative;
     margin-bottom: 40px;
+}
+
+.featured picture {
+    opacity: 0.4;
+}
+
+.html {
+    margin-top: 80px;
 }
 
 .html p {

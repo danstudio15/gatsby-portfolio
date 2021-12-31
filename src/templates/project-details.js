@@ -11,15 +11,15 @@ const ProjectDetails = ({ data }) => {
 
   return (
     <Layout>
-      <div className={styles.details}>
-        <h2>{title}</h2>
-        <h3>{category}</h3>
-        <h4>{dateText}</h4>
-        <div className={styles.featured}>
-          <GatsbyImage image={getImage(featuredImg)} />
+      <div className={styles.featured}>
+        <div className={styles.details}>
+          <h2>{title}</h2>
+          <h4>{dateText}</h4>
+          <h3>{category}</h3>
         </div>
-        <div className={styles.html} dangerouslySetInnerHTML={{ __html: html }} />
+        <GatsbyImage image={getImage(featuredImg)} />
       </div>
+      <div className={styles.html} dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
@@ -36,7 +36,13 @@ export const query = graphql`
         date
         featuredImg {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(
+              layout: FULL_WIDTH,
+              aspectRatio: 2,
+              transformOptions: {
+                fit: COVER
+              }
+            )
           }
         }
       }

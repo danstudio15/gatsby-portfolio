@@ -1,9 +1,9 @@
 ---
-title: Why is COP26 Being Held in Glasgow?
-category: Opinion
-slug: why-is-cop26-being-held-in-glasgow
+title: "Why is COP26 Being Held in Glasgow?"
+category: "Opinion"
+slug: "why-is-cop26-being-held-in-glasgow"
 date: 2021-11-07
-featuredImg: ./skate-banner.png
+featuredImg: "./Why is COP26 in Glasgow Cover.jpg"
 ---
 
 
