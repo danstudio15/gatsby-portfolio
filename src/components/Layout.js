@@ -1,6 +1,5 @@
 import React from 'react'
 import { Helmet } from "react-helmet"
-// import 'semantic-UI-css/semantic.min.css'
 import Navbar from './Navbar'
 import '../styles/global.css'
 import { graphql, useStaticQuery } from 'gatsby'
