@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import Layout from '../components/Layout'
 import * as styles from '../styles/contact.module.css'
-import emailjs from "emailjs-com"
+// import emailjs from "emailjs-com"
 
 
 const Contact = () => {
@@ -9,12 +9,12 @@ const Contact = () => {
   const form = useRef();
 
   function sendEmail() {
-    emailjs.sendForm(
-      "service_vjggo6j",
-      "template_h49ynqt",
-      form.current,
-      "user_CRBT49Rt117fRFsVJCWfX"
-    )
+    // emailjs.sendForm(
+    //   "service_vjggo6j",
+    //   "template_h49ynqt",
+    //   form.current,
+    //   "user_CRBT49Rt117fRFsVJCWfX"
+    // )
   }
 
   return (
