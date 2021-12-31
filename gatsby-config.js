@@ -22,8 +22,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `The Ramsay Beattie Blog`,
+        short_name: `RB Blog`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
