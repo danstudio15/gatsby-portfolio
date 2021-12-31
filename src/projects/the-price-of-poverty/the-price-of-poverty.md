@@ -1,9 +1,9 @@
 ---
-title: The Price of Poverty
-category: Story
-slug: the-price-of-poverty
+title: "The Price of Poverty"
+category: "Story"
+slug: "the-price-of-poverty"
 date: 2021-12-27
-featuredImg: ./gaming-banner.png
+featuredImg: "./The Price of Poverty Cover.jpg"
 ---
 
 

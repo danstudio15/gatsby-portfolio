@@ -1,9 +1,9 @@
 ---
-title: Afghanistan and Today's Empires
-category: Report
-slug: afghanistan-and-todays-empires
+title: "Afghanistan and Today's Empires"
+category: "Report"
+slug: "afghanistan-and-todays-empires"
 date: 2021-10-25
-featuredImg: ./food-banner.png
+featuredImg: "./Afghanistan Cover.jpg"
 ---
 
 

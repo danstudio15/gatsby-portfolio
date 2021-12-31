@@ -1,9 +1,9 @@
 ---
 title: "Skyfall: A Lesson in Tradition"
-category: Opinion
-slug: skyfall-a-lesson-in-tradition
+category: "Opinion"
+slug: "skyfall-a-lesson-in-tradition"
 date: 2021-02-21
-featuredImg: ./coffee-banner.png
+featuredImg: "./thumbnail_Skyfall RB (Crop)(1).jpg"
 ---
 
 
