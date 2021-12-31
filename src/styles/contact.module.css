@@ -1,6 +1,6 @@
 .form {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
   grid-gap: 80px;
   height: 500px;
@@ -9,7 +9,7 @@
 .form label {
   display: block;
   width: 100%;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 
 .form input {
@@ -37,4 +37,12 @@
 .form button {
   display: block;
   width: 100%;
+  margin: 40px 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 0;
+  background-color: rgb(43, 196, 196);
+  color: black;
+  font-size: 1em;
+  font-weight: 500;
 }
