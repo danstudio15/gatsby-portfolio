@@ -18,7 +18,20 @@ module.exports = {
         name: `projects`,
         path: `${__dirname}/src/projects/`,
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `GatsbyJS`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `gatsby-icon.png`,
+      }
+    },
+    "gatsby-plugin-offline",
   ],
   siteMetadata: {
     title: 'The Ramsay Beattie Blog',

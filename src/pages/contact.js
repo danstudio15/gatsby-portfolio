@@ -20,6 +20,11 @@ const Contact = () => {
   return (
     <Layout>
     <form ref={form} className={styles.form} onSubmit={sendEmail}>
+      
+      <label>
+        Message
+        <textarea name="message"/>
+      </label>
 
       <div>
         <label>
@@ -34,11 +39,6 @@ const Contact = () => {
 
         <button type="submit">Send</button>
       </div>
-      
-      <label>
-        Message
-        <textarea name="message"/>
-      </label>
 
     </form>
     </Layout>
