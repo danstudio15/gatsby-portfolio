@@ -34,7 +34,7 @@ module.exports = {
     "gatsby-plugin-offline",
   ],
   siteMetadata: {
-    title: 'The Ramsay Beattie Blog',
+    title: 'Ramsay Beattie Blog',
     description: 'The Ramsay Beattie Blog',
   },
 }
