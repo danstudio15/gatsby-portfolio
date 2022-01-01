@@ -23,6 +23,7 @@ const Home = ({ data }) => {
             </Link>
           ))}
         </div>
+        <div className={styles.blankspace}/>
     </Layout>
   );
 }
@@ -41,7 +42,6 @@ export const query = graphql`
             childImageSharp {
               gatsbyImageData(
                 layout: CONSTRAINED,
-                height: 600,
                 width: 1200,
               )
             }
