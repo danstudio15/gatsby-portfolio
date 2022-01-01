@@ -25,8 +25,8 @@ module.exports = {
         name: `The Ramsay Beattie Blog`,
         short_name: `RB Blog`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        background_color: `#202020`,
+        theme_color: `#202020`,
         display: `standalone`,
         icon: `gatsby-icon.png`,
       }
