@@ -24,16 +24,20 @@ p {
 .layout {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 20px;
 }
 nav {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 40px auto;
+  grid-template-columns: 3fr 2fr;
+  height: 40px;
+  margin: 20px 0;
+  /* background-color: blue; */
 }
 nav .title {
-  font-size: 1.5em;
+  font-size: clamp(1.2em, 2vw, 1.5em);
   font-weight: bold;
+  line-height: 40px;
+  /* background-color: green; */
 }
 nav .links {
   display: inline-block;
@@ -41,10 +45,12 @@ nav .links {
 }
 nav .links a {
   display: inline-block;
+  height: 100%;
   margin-left: 20px;
+  line-height: 40px;
   font-weight: 400;
-  padding-bottom: 8px;
   border-bottom: 3px solid transparent;
+  /* background-color: red; */
 }
 nav .links a:hover {
   border-color: white;
