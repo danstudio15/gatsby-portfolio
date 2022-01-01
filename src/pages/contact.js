@@ -21,12 +21,12 @@ const Contact = () => {
     <Layout>
     <form ref={form} className={styles.form} onSubmit={sendEmail}>
       
-      <label>
+      <label className={styles.left}>
         Message
         <textarea name="message"/>
       </label>
 
-      <div>
+      <div className={styles.right}>
         <label>
           Name
           <input type="text" name="user_name"/>
