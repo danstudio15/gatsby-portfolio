@@ -17,13 +17,11 @@ const Home = ({ data }) => {
                 <GatsbyImage image={getImage(project.frontmatter.featuredImg)}/>
                 <div className={styles.projectinfo}>
                   <h3>{project.frontmatter.title}</h3>
-                  <p>{project.frontmatter.category}</p>
                 </div>
               </div>
             </Link>
           ))}
         </div>
-        <div className={styles.blankspace}/>
     </Layout>
   );
 }
@@ -37,7 +35,6 @@ export const query = graphql`
         frontmatter {
           title
           slug
-          category
           featuredImg {
             childImageSharp {
               gatsbyImageData(

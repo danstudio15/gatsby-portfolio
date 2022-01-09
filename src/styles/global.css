@@ -52,3 +52,8 @@ nav .links a {
 nav .links a:hover {
   border-color: white;
 }
+
+/* Footer */
+footer {
+  height: 100px;
+}

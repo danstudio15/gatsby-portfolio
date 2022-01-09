@@ -28,6 +28,7 @@ export default function Layout({ children }) {
       <div className="content">
         { children }
       </div>
+      <footer/>
     </div>
   )
 }
