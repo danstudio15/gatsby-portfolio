@@ -7,11 +7,23 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    "gatsby-transformer-remark",
     "gatsby-plugin-image",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -22,19 +34,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `The Ramsay Beattie Blog`,
-        short_name: `RB Blog`,
+        name: `Daniel Cooling Portfolio Website`,
+        short_name: `DC Porfolio`,
         start_url: `/`,
         background_color: `#202020`,
         theme_color: `#202020`,
         display: `standalone`,
-        icon: `gatsby-icon.png`,
+        icon: `logo.jpg`,
       }
     },
     "gatsby-plugin-offline",
   ],
   siteMetadata: {
-    title: 'Ramsay Beattie Blog',
-    description: 'The Ramsay Beattie Blog',
+    title: 'dancooling',
+    description: 'Daniel Cooling Portfolio Website',
   },
 }

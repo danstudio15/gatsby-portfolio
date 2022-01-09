@@ -6,7 +6,7 @@ import * as styles from '../styles/project-details.module.css'
 
 const ProjectDetails = ({ data }) => {
   const { html } = data.markdownRemark
-  const { title, category, date, featuredImg } = data.markdownRemark.frontmatter
+  const { title, date, featuredImg } = data.markdownRemark.frontmatter
   let dateText = new Date(date).toDateString();
 
   return (
@@ -15,7 +15,6 @@ const ProjectDetails = ({ data }) => {
         <div className={styles.details}>
           <h2>{title}</h2>
           <h4>{dateText}</h4>
-          <h3>{category}</h3>
         </div>
         <GatsbyImage image={getImage(featuredImg)} />
       </div>
@@ -31,7 +30,6 @@ export const query = graphql`
     markdownRemark(frontmatter: {slug: {eq: $slug}}) {
       html
       frontmatter {
-        category
         title
         date
         featuredImg {
