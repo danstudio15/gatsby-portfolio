@@ -1,13 +1,26 @@
 import React from "react"
-import { graphql } from 'gatsby';
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql, PageProps } from 'gatsby';
+import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
 import Layout from "../components/Layout"
 import * as styles from '../styles/project-details.module.css'
 
-const ProjectDetails = ({ data }) => {
-  const { html } = data.markdownRemark
-  const { title, date, featuredImg } = data.markdownRemark.frontmatter
-  let dateText = new Date(date).toDateString();
+type GraphQlQueryResult = {
+  markdownRemark: {
+    html: string;
+    frontmatter: {
+      title: string;
+      date: string;
+      slug: string;
+      featuredImg: IGatsbyImageData;
+    }
+    id: string;
+  }
+}
+
+const ProjectDetails: React.FC<PageProps<GraphQlQueryResult>> = ({ data }) => {
+  const { html } = data.markdownRemark;
+  const { title, date, featuredImg } = data.markdownRemark.frontmatter;
+  const dateText = new Date(date).toDateString();
 
   return (
     <Layout>
@@ -16,7 +29,7 @@ const ProjectDetails = ({ data }) => {
           <h2>{title}</h2>
           <h4>{dateText}</h4>
         </div>
-        <GatsbyImage image={getImage(featuredImg)} />
+        <GatsbyImage image={getImage(featuredImg)!} alt={""} />
       </div>
       <div className={styles.html} dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
