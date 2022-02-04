@@ -6,15 +6,17 @@ import emailjs from "@emailjs/browser"
 
 const Contact = () => {
 
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
-  function sendEmail() {
-    emailjs.sendForm(
-      "service_vjggo6j",
-      "template_h49ynqt",
-      form.current,
-      "user_CRBT49Rt117fRFsVJCWfX"
-    )
+  function sendEmail(): void {
+    if (form.current) {
+      emailjs.sendForm(
+        "service_vjggo6j",
+        "template_h49ynqt",
+        form.current,
+        "user_CRBT49Rt117fRFsVJCWfX"
+      )
+    }
   }
 
   return (

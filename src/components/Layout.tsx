@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import '../styles/global.css'
 import { graphql, useStaticQuery } from 'gatsby'
 
-export default function Layout({ children }) {
+const Layout: React.FC = ({ children }) => {
   const data = useStaticQuery(graphql`
     {
       site {
@@ -16,7 +16,6 @@ export default function Layout({ children }) {
   `)
 
   const { title } = data.site.siteMetadata
-
 
   return (
     <div className="layout">
@@ -32,3 +31,6 @@ export default function Layout({ children }) {
     </div>
   )
 }
+
+
+export default Layout
