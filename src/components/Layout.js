@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import '../styles/global.css'
 import { graphql, useStaticQuery } from 'gatsby'
 
-const Layout: React.FC = ({ children }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     {
       site {
