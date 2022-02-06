@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const data = useStaticQuery(graphql`
     {
       site {

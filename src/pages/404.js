@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-const NotFound: React.FC = () => {
+const NotFound = () => {
   return (
     <Layout>
       <div>

@@ -4,21 +4,19 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { data } = await graphql(`
     query Articles {
-      allMarkdownRemark {
+      allContentfulPortfolioPost {
         nodes {
-          frontmatter {
-            slug
-          }
+          slug
         }
       }
     }
   `)
 
-  data.allMarkdownRemark.nodes.forEach(node => {
+  data.allContentfulPortfolioPost.nodes.forEach(node => {
     actions.createPage({
-      path: '/projects/'+ node.frontmatter.slug,
-      component: path.resolve('./src/templates/project-details.tsx'),
-      context: { slug: node.frontmatter.slug }
+      path: '/projects/'+ node.slug,
+      component: path.resolve('./src/templates/project-details.js'),
+      context: { slug: node.slug }
     })
   })
 }
