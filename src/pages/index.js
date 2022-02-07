@@ -38,7 +38,7 @@ export const query = graphql`
         slug
         title
         featuredImage {
-          gatsbyImageData(layout: FIXED, width: 1200)
+          gatsbyImageData(layout: CONSTRAINED, width: 1200)
         }
       }
     }
