@@ -25,30 +25,32 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+
 }
+
 nav {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
+  display: flex;
+  justify-content: space-between;
   min-height: 40px;
   margin: 20px 0;
 }
-nav .title {
+
+nav div {
+  display: inline-block;
+  line-height: 40px;
+  text-align: justify;
+}
+
+nav .title a {
   font-size: clamp(1.2em, 2vw, 1.5em);
   font-weight: bold;
-  line-height: 40px;
 }
-nav .links {
-  display: inline-block;
-  text-align: right;
-}
+
 nav .links a {
-  display: inline-block;
-  height: 100%;
   margin-left: 20px;
-  line-height: 40px;
   font-weight: 400;
-  border-bottom: 3px solid transparent;
 }
+
 nav .links a:hover {
   border-color: white;
 }
