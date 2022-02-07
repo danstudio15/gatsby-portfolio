@@ -10,7 +10,7 @@ const Home = ({ data }) => {
   const projects = data.projectList.nodes;
 
   const content = projects.map(project => (
-    <Link to={"/projects/" + project.slug} key={project.id}>
+    <Link to={"/" + project.slug} key={project.id}>
       <div className={styles.projectimage}>
         <GatsbyImage image={getImage(project.featuredImage.gatsbyImageData)} alt={''}/>
         <div className={styles.projectinfo}>
