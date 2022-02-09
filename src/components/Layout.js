@@ -1,10 +1,9 @@
 import React from 'react'
 import { Helmet } from "react-helmet"
-import Navbar from './Navbar'
 import '../styles/global.css'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 
-const Layout = ({ children }) => {
+const Layout = ({children, title = ''}) => {
   const data = useStaticQuery(graphql`
     {
       site {
@@ -15,22 +14,36 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const { title } = data.site.siteMetadata
+  const titleContent = (title ==='') ? 
+  <Link to='/'>{ data.site.siteMetadata.title }</Link> : <h1>{ title }</h1>;
+
 
   return (
     <div className="layout">
+
       <Helmet>
         <meta charSet="utf-8" />
         <title>{ title }</title>
       </Helmet>
-      <Navbar />
+
+      <nav>
+        <div className='title'>
+          {titleContent}
+        </div>
+        <div className="links">
+          <Link to="/">Home</Link>
+          <Link to="/contact">Contact</Link>
+        </div>
+      </nav>
+
       <div className="content">
         { children }
       </div>
+
       <footer/>
+
     </div>
   )
 }
-
 
 export default Layout

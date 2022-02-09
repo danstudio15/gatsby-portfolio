@@ -15,7 +15,7 @@ exports.createPages = async ({ graphql, actions }) => {
   data.allContentfulPortfolioPost.nodes.forEach(node => {
     actions.createPage({
       path: '/'+ node.slug,
-      component: path.resolve('./src/templates/project-details.js'),
+      component: path.resolve('./src/templates/contentful-post.js'),
       context: { slug: node.slug }
     })
   })

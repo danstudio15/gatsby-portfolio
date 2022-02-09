@@ -41,14 +41,25 @@ nav div {
   text-align: justify;
 }
 
-nav .title a {
+nav .title {
   font-size: clamp(1.2em, 2vw, 1.5em);
   font-weight: bold;
 }
 
+nav .title h1 {
+  font-size: clamp(1.2em, 2vw, 1.5em);
+  font-weight: bold;
+}
+
+nav .links {
+  height: 100%;
+}
+
 nav .links a {
+  padding: 10px 0;
   margin-left: 20px;
   font-weight: 400;
+  border-bottom: 3px solid transparent;
 }
 
 nav .links a:hover {

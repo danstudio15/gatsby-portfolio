@@ -2,13 +2,13 @@ import React from "react"
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/Layout"
-import * as styles from '../styles/project-details.module.css'
+import * as styles from '../styles/posts.module.css'
 
 const ProjectDetails = ({ data }) => {
   const title = data.contentfulPortfolioPost.title;
   const date = data.contentfulPortfolioPost.date;
   const image = data.contentfulPortfolioPost.featuredImage.gatsbyImageData;
-  const text = data.contentfulPortfolioPost.text.text;
+  const html = data.contentfulPortfolioPost.text.childMarkdownRemark.html;
   const dateText = new Date(date).toDateString();
 
   return (
@@ -20,9 +20,7 @@ const ProjectDetails = ({ data }) => {
         </div>
         <GatsbyImage image={getImage(image)} alt={""} />
       </div>
-      <div className={styles.html}>
-        <p>{text}</p>
-      </div>
+      <div className={styles.html} dangerouslySetInnerHTML={{ __html: html }}/>
     </Layout>
   )
 }
@@ -35,7 +33,9 @@ export const query = graphql`
       title
       date
       text {
-        text
+        childMarkdownRemark {
+          html
+        }
       }
       featuredImage {
         gatsbyImageData(
