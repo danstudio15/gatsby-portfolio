@@ -41,7 +41,7 @@ nav div {
   text-align: justify;
 }
 
-nav .title {
+nav .title a {
   font-size: clamp(1.2em, 2vw, 1.5em);
   font-weight: bold;
 }

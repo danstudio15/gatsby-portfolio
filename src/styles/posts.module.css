@@ -38,6 +38,7 @@
 
 .html {
     margin-top: 80px;
+    text-align: center;
 }
 
 .html p {
@@ -45,7 +46,16 @@
     line-height: 2em;
 }
 
+.html a {
+    color: rgb(43, 196, 196);
+}
+
 .html hr {
     width: 15%;
     margin: auto;
+}
+
+.html form {
+    text-align: center;
+    display: inline-block;
 }
