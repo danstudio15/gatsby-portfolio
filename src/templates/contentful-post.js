@@ -4,13 +4,22 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/Layout"
 import * as styles from '../styles/posts.module.css'
 
+import Form from '../components/Form';
+
+
 const ProjectDetails = ({ data }) => {
 
   const title = data.contentfulPortfolioPost.title;
   const date = data.contentfulPortfolioPost.date;
   const image = data.contentfulPortfolioPost.featuredImage.gatsbyImageData;
   const markdown = data.contentfulPortfolioPost.text.childMarkdownRemark.html;
+  const extras = data.contentfulPortfolioPost.extras;
   const dateText = new Date(date).toDateString();
+  let content;
+
+  if (extras.hasOwnProperty('form')){
+    content = <Form json={extras.form}/>
+  }
 
   return (
     <Layout>
@@ -22,6 +31,7 @@ const ProjectDetails = ({ data }) => {
         <GatsbyImage image={getImage(image)} alt={""} />
       </div>
       <div className={styles.html} dangerouslySetInnerHTML={{ __html: markdown }}/>
+      {content}
     </Layout>
   )
 }
@@ -36,6 +46,16 @@ export const query = graphql`
       text {
         childMarkdownRemark {
           html
+        }
+      }
+      extras {
+        form {
+          inputs {
+            label
+            type
+            name
+          }
+          link
         }
       }
       featuredImage {

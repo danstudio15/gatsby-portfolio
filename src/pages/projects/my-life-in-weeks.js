@@ -6,11 +6,13 @@ const TimestampToDays = (time) => {
     return Math.floor(time /86400000);
 }
 
-const MyLifeInWeeks = () => {
+const MyLifeInWeeks = ({location}) => {
 
-    const dob = Date.parse('1994/10/08');
+    const dob = Date.parse(location.state.data[0]);
     const date = Date.parse(new Date());
     const daysLived = TimestampToDays(date - dob);
+
+    console.log(location.state.data[0]);
 
     return (
         <Layout title='MyLifeInWeeks'>
