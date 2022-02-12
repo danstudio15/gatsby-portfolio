@@ -6,7 +6,7 @@ const TimestampToDays = (time) => {
     return Math.floor(time /86400000);
 }
 
-const MyLifeInWeeks = ({location}) => {
+const MyLifeInWeeks = () => {
 
     // let inputValue = (location.state !== null) ? location.state.data[0] : new Date();
     let inputValue = "1994/10/08";
