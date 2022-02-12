@@ -14,8 +14,6 @@ const MyLifeInWeeks = () => {
     const date = Date.parse(new Date());
     const daysLived = TimestampToDays(date - dob);
 
-    console.log(location.state.data[0]);
-
     return (
         <Layout title='MyLifeInWeeks'>
             <div>
