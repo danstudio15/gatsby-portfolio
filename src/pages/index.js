@@ -33,7 +33,7 @@ export default Home
 
 export const query = graphql`
   query ProjectsPage {
-    projectList: allContentfulPortfolioPost (sort: {fields: date, order: DESC}) {
+    projectList: allContentfulPostTest (sort: {fields: date, order: DESC}) {
       nodes {
         slug
         title

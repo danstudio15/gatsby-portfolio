@@ -9,11 +9,11 @@ import Form from '../components/Form';
 
 const ProjectDetails = ({ data }) => {
 
-  const title = data.contentfulPortfolioPost.title;
-  const date = data.contentfulPortfolioPost.date;
-  const image = data.contentfulPortfolioPost.featuredImage.gatsbyImageData;
-  const markdown = data.contentfulPortfolioPost.text.childMarkdownRemark.html;
-  const extras = data.contentfulPortfolioPost.extras;
+  const title = data.contentfulPostTest.title;
+  const date = data.contentfulPostTest.date;
+  const image = data.contentfulPostTest.featuredImage.gatsbyImageData;
+  const markdown = data.contentfulPostTest.text.childMarkdownRemark.html;
+  const extras = data.contentfulPostTest.extras;
   const dateText = new Date(date).toDateString();
   let content;
 
@@ -40,7 +40,7 @@ export default ProjectDetails
 
 export const query = graphql`
   query ProjectDetails($slug: String) {
-    contentfulPortfolioPost(slug: {eq: $slug}) {
+    contentfulPostTest(slug: {eq: $slug}) {
       title
       date
       text {

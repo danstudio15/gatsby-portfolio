@@ -4,7 +4,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { data } = await graphql(`
     query Articles {
-      allContentfulPortfolioPost {
+      allContentfulPostTest {
         nodes {
           slug
         }
@@ -12,7 +12,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  data.allContentfulPortfolioPost.nodes.forEach(node => {
+  data.allContentfulPostTest.nodes.forEach(node => {
     actions.createPage({
       path: '/'+ node.slug,
       component: path.resolve('./src/templates/contentful-post.js'),
