@@ -1,0 +1,56 @@
+.details {
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 20px;
+}
+
+.details h2 {
+    font-size: clamp(1.2em, 4vw, 2.5em);
+    font-weight: 500;
+}
+
+.details h3 {
+    font-size: clamp(1em, 2vw, 1.5em);
+    font-weight: 400;
+    color: rgb(231, 231, 231);
+}
+
+.details h4 {
+    font-size: clamp(0.8em, 1.5vw, 1em);
+    font-weight: 400;
+    color: rgb(231, 231, 231);
+    margin-top: 4px;
+}
+
+.featured {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.featured picture {
+    opacity: 0.4;
+}
+
+.html {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.html p {
+    text-align: justify;
+    line-height: 2em;
+}
+
+.html a {
+    color: rgb(43, 196, 196);
+}
+
+.html hr {
+    width: 15%;
+    margin: auto;
+}
