@@ -17,9 +17,9 @@ const ProjectDetails = ({ data }) => {
   const dateText = new Date(date).toDateString();
   let content;
 
-  if (extras.hasOwnProperty('form')){
-    content = <Form json={extras.form}/>
-  }
+  // if (extras.hasOwnProperty('form')){
+  //   content = <Form json={extras.form}/>
+  // }
 
   return (
     <Layout>
