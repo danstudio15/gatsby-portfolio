@@ -4,12 +4,16 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/Layout"
 import * as styles from '../styles/posts.module.css'
 
+
 const ProjectDetails = ({ data }) => {
-  const title = data.contentfulPortfolioPost.title;
-  const date = data.contentfulPortfolioPost.date;
-  const image = data.contentfulPortfolioPost.featuredImage.gatsbyImageData;
-  const html = data.contentfulPortfolioPost.text.childMarkdownRemark.html;
+
+  const title = data.contentfulPostTest.title;
+  const date = data.contentfulPostTest.date;
+  const image = data.contentfulPostTest.featuredImage.gatsbyImageData;
+  const markdown = data.contentfulPostTest.text.childMarkdownRemark.html;
   const dateText = new Date(date).toDateString();
+
+ 
 
   return (
     <Layout>
@@ -20,7 +24,7 @@ const ProjectDetails = ({ data }) => {
         </div>
         <GatsbyImage image={getImage(image)} alt={""} />
       </div>
-      <div className={styles.html} dangerouslySetInnerHTML={{ __html: html }}/>
+      <div className={styles.html} dangerouslySetInnerHTML={{ __html: markdown }}/>
     </Layout>
   )
 }
@@ -29,7 +33,7 @@ export default ProjectDetails
 
 export const query = graphql`
   query ProjectDetails($slug: String) {
-    contentfulPortfolioPost(slug: {eq: $slug}) {
+    contentfulPostTest(slug: {eq: $slug}) {
       title
       date
       text {
@@ -41,6 +45,7 @@ export const query = graphql`
         gatsbyImageData(
           layout: FULL_WIDTH,
           aspectRatio: 2,
+          placeholder: BLURRED
         )
       }
     }
