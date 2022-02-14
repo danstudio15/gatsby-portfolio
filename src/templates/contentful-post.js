@@ -7,10 +7,10 @@ import * as styles from '../styles/posts.module.css'
 
 const ProjectDetails = ({ data }) => {
 
-  const title = data.contentfulPostTest.title;
-  const date = data.contentfulPostTest.date;
-  const image = data.contentfulPostTest.featuredImage.gatsbyImageData;
-  const markdown = data.contentfulPostTest.text.childMarkdownRemark.html;
+  const title = data.contentfulDancoolingPost.title;
+  const date = data.contentfulDancoolingPost.date;
+  const image = data.contentfulDancoolingPost.featuredImage.gatsbyImageData;
+  const markdown = data.contentfulDancoolingPost.text.childMarkdownRemark.html;
   const dateText = new Date(date).toDateString();
 
  
@@ -33,7 +33,7 @@ export default ProjectDetails
 
 export const query = graphql`
   query ProjectDetails($slug: String) {
-    contentfulPostTest(slug: {eq: $slug}) {
+    contentfulDancoolingPost(slug: {eq: $slug}) {
       title
       date
       text {
