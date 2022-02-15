@@ -8,12 +8,14 @@ const TimestampToDays = (time) => {
 
 const MyLifeInWeeks = ({location}) => {
 
-    let inputValue = (location.state !== null) ? location.state.data[0] : new Date();
+    // let inputValue = new Date();
+    // if (location.state.data) {
+    //     inputValue = 
+    // }
+    let inputValue = (location.state.data) ? location.state.data[0] : new Date();
     const dob = Date.parse(inputValue);
     const date = Date.parse(new Date());
     const daysLived = TimestampToDays(date - dob);
-
-    console.log(location.state.data[0]);
 
     return (
         <Layout title='MyLifeInWeeks'>
