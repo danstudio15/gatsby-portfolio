@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/Layout"
+import Form from '../components/Form';
 import * as styles from '../styles/posts.module.css'
 
 
@@ -12,6 +13,14 @@ const ProjectDetails = ({ data }) => {
   const image = data.contentfulDancoolingPost.featuredImage.gatsbyImageData;
   const markdown = data.contentfulDancoolingPost.text.childMarkdownRemark.html;
   const dateText = new Date(date).toDateString();
+
+  let content;
+  if (data.contentfulDancoolingPost.extras) {
+    const extras = data.contentfulDancoolingPost.extras;
+    if (extras.hasOwnProperty('form')){
+      content = <Form json={extras.form}/>
+    }
+  }
 
  
 
@@ -25,6 +34,7 @@ const ProjectDetails = ({ data }) => {
         <GatsbyImage image={getImage(image)} alt={""} />
       </div>
       <div className={styles.html} dangerouslySetInnerHTML={{ __html: markdown }}/>
+      {content}
     </Layout>
   )
 }
@@ -47,6 +57,16 @@ export const query = graphql`
           aspectRatio: 2,
           placeholder: BLURRED
         )
+      }
+      extras {
+        form {
+          inputs {
+            label
+            type
+            name
+          }
+          link
+        }
       }
     }
   }

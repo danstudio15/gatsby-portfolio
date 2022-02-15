@@ -38,11 +38,16 @@
 
 .html {
     margin-top: 80px;
+    text-align: center;
 }
 
 .html p {
     text-align: justify;
     line-height: 2em;
+}
+
+.html a {
+    color: rgb(43, 196, 196);
 }
 
 .html hr {
