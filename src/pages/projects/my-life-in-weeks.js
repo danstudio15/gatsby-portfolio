@@ -9,7 +9,7 @@ const TimestampToDays = (time) => {
 const MyLifeInWeeks = ({location}) => {
 
     let inputValue = new Date();
-    if (location.state.hasOwnProperty('data')) {
+    if (location) {
         inputValue = location.state.data[0];
     }
     const dob = Date.parse(inputValue);
