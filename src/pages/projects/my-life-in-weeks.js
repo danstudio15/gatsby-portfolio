@@ -10,7 +10,11 @@ const MyLifeInWeeks = ({location}) => {
 
     let inputValue = new Date();
     if (location) {
-        inputValue = location.state.data[0];
+        if(location.hasOwnProperty('state')){
+            if(location.state.hasOwnProperty('data')) {
+                inputValue = location.state.data[0];
+            }
+        }
     }
     const dob = Date.parse(inputValue);
     const date = Date.parse(new Date());
